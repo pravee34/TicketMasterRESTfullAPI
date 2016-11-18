@@ -25,6 +25,8 @@ Note: each ticket hold should expire within a set number of seconds.
 ## Prerequisites
 
 1.Install Java 8, Please follow Installation steps for Java8 in Ubuntu and the output for "java -version" is displayed as "1.8.0_111" 
+
+
 	```
 		$ sudo add-apt-repository ppa:webupd8team/java
 		$ sudo apt-get update
@@ -61,7 +63,9 @@ Note: each ticket hold should expire within a set number of seconds.
 	$git clone https://github.com/pravee34/TicketMasterRESTfullAPI.git
 	```
  folder structure:
+	
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/1.projectstructure.JPG)
+	
 3.Make sure download is Successful and your GIT status should confirm. 
 
 	```$git status```
@@ -72,17 +76,27 @@ Note: each ticket hold should expire within a set number of seconds.
 	$mvn clean
 	```
 	
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/2.mvnclean.JPG)
+	
+	
 5.Execute the below command for MAVEN package,and it should provide the BUILD SUCCESS status and all the test should PASS status. if any test fails then review your configuration once again. 
 
 	```
 	$mvn package
 	```
+	
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/3.mvnpackage.JPG)
+	
 
 6.Run the application Jar using below command.
 
 	```
 	$java -jar target\TicketMasterRESTfullAPI-0.0.1-SNAPSHOT.jar
 	```
+	
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/4.Springboot.JPG)
+	
+	
 7. server would be running on Port 7777 in this process, if this port does not support, please change it and re-run the steps from Step:4. Please refer application.properties under /src/main/resources to change the port. 
 
 8. once server is started ,then please proceed with below steps
@@ -99,31 +113,38 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$304
 	```
+	
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/5.findavailableseats.JPG)
+	
+	
 2.Find and hold the best available seats on behalf of a customer and each ticket hold should expire within a 90 seconds.
 	 
 2a.Create a input file for POST process with below contents with file name - "holdPOSTRequestJSONfile.txt" 
 	
-	  	```
-	 	{"numSeats":"2","customerEmail":"monkey@example.com"}
-	 	```	 
+	```
+	{"numSeats":"2","customerEmail":"monkey@example.com"}
+	```	 
 
 2b.verify the contents of the file
 	 
 	  ```
-	  	$cat holdPOSTRequestJSONfile.txt
+		$cat holdPOSTRequestJSONfile.txt
 	  ```
 	   	 
 2d.Make sure the output shown as below both WINDOWS or UNIX
 	 	
-	 	```
-	 		${"numSeats":"2","customerEmail":"monkey@example.com"}
-	 	```
+	```
+		${"numSeats":"2","customerEmail":"monkey@example.com"}
+	```
 	 	
 2e.execute the POST shown below same for WINODWs or UNIX:
 	 
-	 	 ```
-	 	 		$curl -X POST -d @holdPOSTRequestJSONfile.txt http://localhost:7777/tickets/hold --header "Content-Type:application/json"
-	 	 		```
+	```
+	$curl -X POST -d @holdPOSTRequestJSONfile.txt http://localhost:7777/tickets/hold --header "Content-Type:application/json"
+	```
+
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/6.holdtheBestavailableSeats.JPG)
+	 	 			 
 	 	 			 
 f.The final expected output and same for UNIX or WINDOWS:
 
@@ -143,25 +164,33 @@ f.The final expected output and same for UNIX or WINDOWS:
 	
 3b.Execute below command : 
 				
-			```
-				curl -X PUT -d @reservationsPUT.txt http://localhost:7777/tickets/reservations --header "Content-Type:application/json"
-				```
+	```
+	curl -X PUT -d @reservationsPUT.txt http://localhost:7777/tickets/reservations --header "Content-Type:application/json"
+	```
+
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/7.Reservations.JPG)
+				
 				
 3c.Expected output should show as 
 				
-				```
-				{"numSeats":0,"customerEmail":"monkey@example.com","orderNumber":98793}
-				```
+	```
+	{"numSeats":0,"customerEmail":"monkey@example.com","orderNumber":98793}
+	```
 				
 3d.check back and see your reservation is confirmed: 
 				
-				```curl http://localhost:7777/tickets/availableseats```
+	```curl http://localhost:7777/tickets/availableseats```
 	
 	e. output expected as ```302```
+	
 ## Wishlist
+
    The searching algorithm based on the previous visits and customer GEO location information (parking lot or travel directions).
    Based on the customer attributes whether customer looks for Quality or Price
+   
 ## Thank you Note!!!
+
 Thanks for code challenge and really enjoyed working on it. 
+	
 	
 	
