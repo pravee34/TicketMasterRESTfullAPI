@@ -63,7 +63,8 @@ Note: each ticket hold should expire within a set number of seconds.
 	$git clone https://github.com/pravee34/TicketMasterRESTfullAPI.git
 	```
  folder structure:
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/1.projectstructure.JPG)
+
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/1.projectstructure.JPG)
 	
 3.Make sure download is Successful and your GIT status should confirm. 
 
@@ -74,7 +75,7 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$mvn clean
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/2.mvnclean.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/2.mvnclean.JPG)
 	
 	
 5.Execute the below command for MAVEN package,and it should provide the BUILD SUCCESS status and all the test should PASS status. if any test fails then review your configuration once again. 
@@ -82,7 +83,7 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$mvn package
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/3.mvnpackage.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/3.mvnpackage.JPG)
 	
 
 6.Run the application Jar using below command.
@@ -90,7 +91,7 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$java -jar target\TicketMasterRESTfullAPI-0.0.1-SNAPSHOT.jar
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/4.Springboot.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/4.Springboot.JPG)
 	
 	
 7. server would be running on Port 7777 in this process, if this port does not support, please change it and re-run the steps from Step:4. Please refer application.properties under /src/main/resources to change the port. 
@@ -109,7 +110,7 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$304
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/5.findavailableseats.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/5.findavailableseats.JPG)
 	
 	
 2.Find and hold the best available seats on behalf of a customer and each ticket hold should expire within a 90 seconds.
@@ -137,7 +138,7 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$curl -X POST -d @holdPOSTRequestJSONfile.txt http://localhost:7777/tickets/hold --header "Content-Type:application/json"
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/6.holdtheBestavailableSeats.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/6.holdtheBestavailableSeats.JPG)
 	 	 			 
 	 	 			 
 f.The final expected output and same for UNIX or WINDOWS:
@@ -161,7 +162,7 @@ f.The final expected output and same for UNIX or WINDOWS:
 	```
 	curl -X PUT -d @reservationsPUT.txt http://localhost:7777/tickets/reservations --header "Content-Type:application/json"
 	```
-	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/7.Reservations.JPG)
+![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/7.Reservations.JPG)
 				
 				
 3c.Expected output should show as 
