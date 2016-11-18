@@ -60,7 +60,8 @@ Note: each ticket hold should expire within a set number of seconds.
 	$cd /home/{user id}/TicketService
 	$git clone https://github.com/pravee34/TicketMasterRESTfullAPI.git
 	```
-	
+ folder structure:
+	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/1.projectstructure.JPG)
 3.Make sure download is Successful and your GIT status should confirm. 
 
 	```$git status```
