@@ -74,7 +74,6 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$mvn clean
 	```
-	
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/2.mvnclean.JPG)
 	
 	
@@ -83,7 +82,6 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$mvn package
 	```
-	
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/3.mvnpackage.JPG)
 	
 
@@ -92,7 +90,6 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$java -jar target\TicketMasterRESTfullAPI-0.0.1-SNAPSHOT.jar
 	```
-	
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/4.Springboot.JPG)
 	
 	
@@ -112,7 +109,6 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$304
 	```
-	
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/5.findavailableseats.JPG)
 	
 	
@@ -141,7 +137,6 @@ Note: each ticket hold should expire within a set number of seconds.
 	```
 	$curl -X POST -d @holdPOSTRequestJSONfile.txt http://localhost:7777/tickets/hold --header "Content-Type:application/json"
 	```
-
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/6.holdtheBestavailableSeats.JPG)
 	 	 			 
 	 	 			 
@@ -166,7 +161,6 @@ f.The final expected output and same for UNIX or WINDOWS:
 	```
 	curl -X PUT -d @reservationsPUT.txt http://localhost:7777/tickets/reservations --header "Content-Type:application/json"
 	```
-
 	![alt tag](https://github.com/pravee34/TicketMasterRESTfullAPI/blob/master/7.Reservations.JPG)
 				
 				
