@@ -58,7 +58,7 @@ Note: each ticket hold should expire within a set number of seconds.
 
 	```
 	$cd /home/{user id}/TicketService
-	$git clone https://github.com/spring-guides/gs-maven.git
+	$git clone https://github.com/pravee34/TicketMasterRESTfullAPI.git
 	```
 	
 3.Make sure download is Successful and your GIT status should confirm. 
